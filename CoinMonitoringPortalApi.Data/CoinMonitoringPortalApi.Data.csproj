@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18231698-D32C-4583-946C-1F69FBABFD2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoinMonitoringPortalApi.Data</RootNamespace>
+    <AssemblyName>CoinMonitoringPortalApi.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Account\AuthKey.cs" />
+    <Compile Include="Data\Account\User.cs" />
+    <Compile Include="Data\Enums\EcoIndexEnum.cs" />
+    <Compile Include="Data\Enums\ExchangePairTypeEnum.cs" />
+    <Compile Include="Data\Enums\ExchangeTypeEnum.cs" />
+    <Compile Include="Data\Enums\TradeActionType.cs" />
+    <Compile Include="Data\Exchange\CexPortfolioData.cs" />
+    <Compile Include="Data\Exchange\PoloniexTradeData.cs" />
+    <Compile Include="Data\Trade\ChartPoint.cs" />
+    <Compile Include="Data\Trade\CurrencyData.cs" />
+    <Compile Include="Data\Trade\EcoPoint.cs" />
+    <Compile Include="Data\Trade\ExchangePair.cs" />
+    <Compile Include="Data\Trade\PortfolioData.cs" />
+    <Compile Include="Data\Trade\ScheduledTrade.cs" />
+    <Compile Include="Data\Trade\TradeCriteria.cs" />
+    <Compile Include="Messages\Account\AuthKeys.cs" />
+    <Compile Include="Messages\Account\ChangeUserPassword.cs" />
+    <Compile Include="Messages\Account\CreateAuthKey.cs" />
+    <Compile Include="Messages\Account\DeleteAuthKey.cs" />
+    <Compile Include="Messages\Account\Login.cs" />
+    <Compile Include="Messages\Account\Register.cs" />
+    <Compile Include="Messages\Account\UpdateUser.cs" />
+    <Compile Include="Messages\CoinManagers\CexBalance.cs" />
+    <Compile Include="Messages\CoinManagers\CexTrade.cs" />
+    <Compile Include="Messages\CoinManagers\PoloniexBalance.cs" />
+    <Compile Include="Messages\CoinManagers\PoloniexTrade.cs" />
+    <Compile Include="Messages\Elastic\ElasticBool.cs" />
+    <Compile Include="Messages\Elastic\ElasticEcoQuery.cs" />
+    <Compile Include="Messages\Elastic\ElasticExchangeType.cs" />
+    <Compile Include="Messages\Elastic\ElasticFilter.cs" />
+    <Compile Include="Messages\Elastic\ElasticFormattedBool.cs" />
+    <Compile Include="Messages\Elastic\ElasticFormattedFilter.cs" />
+    <Compile Include="Messages\Elastic\ElasticFormattedMustFilter.cs" />
+    <Compile Include="Messages\Elastic\ElasticFormattedQuery.cs" />
+    <Compile Include="Messages\Elastic\ElasticFormattedShouldFilter.cs" />
+    <Compile Include="Messages\Elastic\ElasticHitWrapper.cs" />
+    <Compile Include="Messages\Elastic\ElasticMultiRequest.cs" />
+    <Compile Include="Messages\Elastic\ElasticMustFilter.cs" />
+    <Compile Include="Messages\Elastic\ElasticMustName.cs" />
+    <Compile Include="Messages\Elastic\ElasticMustPair.cs" />
+    <Compile Include="Messages\Elastic\ElasticQuery.cs" />
+    <Compile Include="Messages\Elastic\ElasticRange.cs" />
+    <Compile Include="Messages\Elastic\ElasticRangeParameter.cs" />
+    <Compile Include="Messages\Elastic\ElasticRecordWrapper.cs" />
+    <Compile Include="Messages\Elastic\ElasticSearchRequest.cs" />
+    <Compile Include="Messages\Elastic\ElasticShouldFilter.cs" />
+    <Compile Include="Messages\Elastic\ElasticSingleRequest.cs" />
+    <Compile Include="Messages\Elastic\ElasticSort.cs" />
+    <Compile Include="Messages\Elastic\ElasticTermExchangeNr.cs" />
+    <Compile Include="Messages\Elastic\ElasticTermId.cs" />
+    <Compile Include="Messages\Elastic\ElasticTImeSort.cs" />
+    <Compile Include="Messages\Elastic\GetEcoIndexData.cs" />
+    <Compile Include="Messages\Elastic\GetFormattedData.cs" />
+    <Compile Include="Messages\Trade\CreateScheduledTrades.cs" />
+    <Compile Include="Messages\Trade\DeleteScheduledTrade.cs" />
+    <Compile Include="Messages\Trade\EcoIndex.cs" />
+    <Compile Include="Messages\Trade\GetChartData.cs" />
+    <Compile Include="Messages\Trade\GetScheduledTrades.cs" />
+    <Compile Include="Messages\Trade\RecalculateActions.cs" />
+    <Compile Include="Messages\Trade\ResetScheduledTrade.cs" />
+    <Compile Include="Messages\Trade\SinchPortfolio.cs" />
+    <Compile Include="Messages\Trade\SynchronizePortfolio.cs" />
+    <Compile Include="Messages\Trade\TickerFormattedDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
