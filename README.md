@@ -1,5 +1,5 @@
 # CoinMonitoringApi
-Coin monitoring BE part intented as a function demo for a bachlors project.
+Coin monitoring BE part intented as a function demo for a bachelors project.
 
 This was made to show the functionality of the coin monitoring service.
 
